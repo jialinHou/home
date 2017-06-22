@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>回家吃饭</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="js/swiper.min.css">
+    <script src="js/swiper.min.js"></script>
+    <script src="js/food.js"></script>
+    <style>
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide{
+            position: relative;
+        }
+        .music{
+            width: 16px;
+            height: 16px;
+            border-radius:50%;
+            background: url("img/m.png") no-repeat center;
+            background-size: 100% 100%;
+            position: absolute;
+            right:10px ;
+            top:10px ;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <h1>PhoneGap</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+    </div>
+    <!--home-->
+    <div class="doc swiper-container" id="box">
+    <ul class="swiper-wrapper">
+        <li class="swiper-slide"><img src="img/1.jpg" alt=""></li>
+        <li class="swiper-slide"><img src="img/2.jpg" alt=""></li>
+        <li class="swiper-slide"><img src="img/3.jpg" alt=""></li>
+        <li class="swiper-slide">
+            <img src="img/4.jpg" alt="">
+            <div class="music"></div>
+        </li>
+        <li class="swiper-slide">
+            <img src="img/5.jpg" alt="">
+            <div class="music"></div>
+        </li>
+        <li class="swiper-slide">
+            <img src="img/6.jpg" alt="">
+            <div class="music"></div>
+        </li>
+        <li class="swiper-slide">
+            <img src="img/7.jpg" alt="">
+            <div class="music"></div>
+        </li>
+        <li class="swiper-slide">
+            <img src="img/8.jpg" alt="">
+            <div class="music"></div>
+        </li>
+        <li class="swiper-slide">
+            <img src="img/9.jpg" alt="">
+            <div class="music"></div>
+        </li>
+    </ul>
+    <audio src="mp3/music4.mp3" controls id="mp3"></audio>
+</div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

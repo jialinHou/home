@@ -1,0 +1,27 @@
+.doc{
+    width: 16rem;
+    overflow: hidden;
+}
+.doc ul{
+    width: 16rem;
+    overflow: hidden;
+}
+.doc ul li{
+    width: 16rem;
+    position: relative;
+}
+.doc ul li img{
+    width: 16rem;
+    height: 100%;
+}
+.doc ul li .music{
+    width: 1.05rem;
+    height: 1.05rem;
+    border-radius:50%;
+    background: url("../img/m.png") no-repeat center;
+    background-size: 100% 100%;
+    position: absolute;
+    right:0.375rem ;
+    top:0.45rem ;
+    z-index: 999;
+}
